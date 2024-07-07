@@ -71,3 +71,6 @@ gem 'html2slim'
 gem 'bootstrap', '~> 5.1.0'
 
 gem 'rails-i18n', '~> 5.1' 
+
+# autolink
+gem 'rails_autolink'
