@@ -18,11 +18,18 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - 'POSTGRES_USER=postgres'
-      - 'POSTGRES_PASSWORD=password'
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      SELENIUM_DRIVER_URL: http://selenium_chrome:4444/wd/hub
     volumes:
       - '.:/rails_practice_book'
     tty: true
     stdin_open: true
     depends_on:
       - db
+      - selenium_chrome
+
+  selenium_chrome:
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
