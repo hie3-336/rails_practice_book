@@ -76,3 +76,5 @@ gem 'rails-i18n', '~> 5.1'
 
 # autolink
 gem 'rails_autolink'
+
+gem 'ransack'
